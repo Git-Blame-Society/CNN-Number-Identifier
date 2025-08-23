@@ -140,6 +140,6 @@ def write_dataset(filename, n_samples_per_digit):
                 f.write('\n')
 
 # Generate 100 training samples (25 per digit 0-9)
-write_dataset('train_ascii.txt', 25)
+write_dataset('train_ascii.txt', 100)
 # Generate 10 test samples (5 per digit)
-write_dataset('test_ascii.txt', 5)
+write_dataset('test_ascii.txt', 10)
