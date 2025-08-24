@@ -1,10 +1,10 @@
-#include "headers/conv2d.hpp"
+#include "../headers/conv2d.hpp"
 #include <cstdlib>
 
 conv2d::conv2d(int in_ch, int out_ch, int k) : in_channels(in_ch), out_channels(out_ch), kernel_size(k)
 {
     default_random_engine eng(rand());
-    uniform_int_distribution<float> dist(-0.1f, 0.1f);
+    uniform_real_distribution<float> dist(-0.1f, 0.1f);
 
     kernels.resize(out_channels, vector<vector<vector<float>>>(in_channels, vector<vector<float>>(kernel_size, vector<float>(kernel_size))));
 
